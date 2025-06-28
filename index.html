@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <title>Тестовое задание</title>
+</head>
+<body>
+  <table>
+    <tr>
+      <!-- Левая колонка: форма -->
+      <td style="vertical-align: top; padding-right: 20px;">
+        <form>
+          <p><input id="idInstance" type="text" placeholder="idInstance"></p>
+          <p><input id="ApiTokenInstance" type="text" placeholder="ApiTokenInstance"></p>
+
+          <p><button id="getSettings">getSettings</button></p>
+          <p><button id="getStateInstance">getStateInstance</button></p>
+
+          <p><input id="messageNumber" type="text" placeholder="Номер получателя"></p>
+          <p><input id="messageContent" type="text" placeholder="Текст сообщения"></p>
+          <p><button id="sendMessage">sendMessage</button></p>
+
+          <p><input id="urlNumber" type="text" placeholder="Номер получателя"></p>
+          <p><input id="urlContent" type="text" placeholder="Ссылка на файл"></p>
+          <p><button id="sendFileByUrl">sendFileByUrl</button></p>
+        </form>
+      </td>
+
+      <!-- Правая колонка: ответ -->
+      <td style="vertical-align: top;">
+        <label for="response">Ответ от сервера:</label><br>
+        <textarea id="response" rows="20" cols="60" readonly></textarea>
+      </td>
+    </tr>
+  </table>
+
+  <script src="index.js"></script>
+</body>
+</html>
