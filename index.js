@@ -98,10 +98,12 @@ document.getElementById('sendFileByUrl').addEventListener('click', () =>
     const token = document.getElementById('ApiTokenInstance').value;
     const num = document.getElementById('urlNumber').value;
     const content = document.getElementById('urlContent').value;
+	const fileName = content.split('/').pop().split('?')[0];
 	
 	const body = {
 	  chatId: `${num}@c.us`,
-	  urlFile: content
+	  urlFile: content,
+	  fileName: fileName
 	};
 
     callGreenApi('sendFileByUrl', id, token, body)
